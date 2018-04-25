@@ -4,29 +4,29 @@ import base from './base'
 import NewCampaign from './NewCampaign'
 
 class AdminCampaigns extends Component {
-	constructor(props) {
-		super(props)
+  constructor(props) {
+    super(props)
 
-		this.state = {
-			campaigns: {}
+    this.state = {
+      campaigns: {}
     }
-		
+    
     this.removeCampaign = this.removeCampaign.bind(this)
     this.renderCampaign = this.renderCampaign.bind(this)
   }
-	componentDidMount() {
-		base
-			.syncState('campaigns', {
-				context: this,
-				state: 'campaigns',
-				asArray: false
-			})
+  componentDidMount() {
+    base
+      .syncState('campaigns', {
+        context: this,
+        state: 'campaigns',
+        asArray: false
+      })
   }
   removeCampaign(key) {
-		base
-			.remove(`campaigns/${key}`, err => {
-      	console.log(err)
-    	})
+    base
+      .remove(`campaigns/${key}`, err => {
+        console.log(err)
+      })
   }
   renderCampaign(key, campaign) {
     return (
@@ -49,12 +49,12 @@ class AdminCampaigns extends Component {
         <div className='row'>
           {
             Object
-            	.keys(this.state.campaigns)
+              .keys(this.state.campaigns)
               .map(key => this.renderCampaign(key, this.state.campaigns[key]))
           }
-    		</div>
-				<NewCampaign />
-			</div>
+        </div>
+        <NewCampaign />
+      </div>
     )
   }
 }

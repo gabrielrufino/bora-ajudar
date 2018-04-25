@@ -4,80 +4,77 @@ import axios from 'axios'
 import base from './base'
 
 class Campaigns extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
       campaigns: {}
     }
   }
-  componentDidMount() {
+  componentDidMount () {
     base.syncState('campaigns', {
       context: this,
       state: 'campaigns',
       asArray: false
     })
   }
-  handleDonate(key) {
+  handleDonate (key) {
     axios
       .post('/api/donate', {
         campaign: key,
         valor: 3
       })
       .then(data => {
-        alert(data)
+        console.log(data)
       })
   }
-  renderCampaign(key, campaign) {
+  renderCampaign (key, campaign) {
     return (
       <section key={key} className='page-section'>
-          <div className='container'>
-            <div className='product-item bg-faded'>
-              <div className='product-item-title d-flex'>
-                <div className='p-5 d-flex mr-auto rounded'>
-                  <h2 className='section-heading mb-0'>
-                    <span className='section-heading-upper'>{ campaign.slogan }</span>
-                    <span className='section-heading-lower'>{ campaign.name }</span>
-                  </h2>
-                </div>
+        <div className='container'>
+          <div className='product-item bg-faded'>
+            <div className='product-item-title d-flex'>
+              <div className='p-5 d-flex mr-auto rounded'>
+                <h2 className='section-heading mb-0'>
+                  <span className='section-heading-upper'>{ campaign.slogan }</span>
+                  <span className='section-heading-lower'>{ campaign.name }</span>
+                </h2>
               </div>
-              <div className='product-item-description d-flex'>
-                <div className='p-5 rounded'>
-                  <p className='mb-0'>{ campaign.description }</p>
-                  
-                  {
-                    campaign.type === 'money' &&
-                    <div>
-                      <div className='progress'>
-                        <div className='progress-bar' role='progressbar' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
-                      </div>
-                      <p>Meta: R$ { campaign.goal } | Atingidos: R$ { campaign.current }</p>
-                      <div>
-                        <button className='btn btn-success' onClick={ () => this.handleDonate(key) }>Contribuir</button>
-                      </div>
+            </div>
+            <div className='product-item-description d-flex'>
+              <div className='p-5 rounded'>
+                <p className='mb-0'>{ campaign.description }</p>
+
+                {
+                  campaign.type === 'money' &&
+                  <div>
+                    <div className='progress'>
+                      <div className='progress-bar' role='progressbar' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
                     </div>
-                  }
-                  {
-                    campaign.type === 'items' &&
+                    <p>Meta: R$ { campaign.goal } | Atingidos: R$ { campaign.current }</p>
                     <div>
-                      <h4>Como doar</h4>
-                      <p>{ campaign.how }</p>
-                      <div>
-                        <button className='btn btn-success'>Doar</button>
-                      </div>
+                      <button className='btn btn-success' onClick={() => this.handleDonate(key)}>Contribuir</button>
                     </div>
-                  }
-                </div>
-              </div>
-              <div className='ml-auto'>
-                
+                  </div>
+                }
+                {
+                  campaign.type === 'items' &&
+                  <div>
+                    <h4>Como doar</h4>
+                    <p>{ campaign.how }</p>
+                    <div>
+                      <button className='btn btn-success'>Doar</button>
+                    </div>
+                  </div>
+                }
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
     )
   }
-  render() {
+  render () {
     return (
       <div>
         <section className='page-section'>

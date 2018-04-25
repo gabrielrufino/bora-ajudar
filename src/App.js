@@ -14,7 +14,7 @@ import Admin from './Admin'
 import Footer from './Footer'
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <Router>
         <div>

@@ -19,23 +19,23 @@ const Header = props => {
             <ul className='navbar-nav mx-auto'>
               <li className='nav-item active px-lg-4'>
                 <Link to='/' className='nav-link text-uppercase text-expanded'>
-									Início
+                  Início
                 </Link>
               </li>
               <li className='nav-item px-lg-4'>
                 <Link to='/sobre' className='nav-link text-uppercase text-expanded'>
-									Sobre
-								</Link>
+                  Sobre
+                </Link>
               </li>
               <li className='nav-item px-lg-4'>
                 <Link to='/campanhas' className='nav-link text-uppercase text-expanded'>
-									Campanhas
-								</Link>
+                  Campanhas
+                </Link>
               </li>
               <li className='nav-item px-lg-4'>
                 <Link to='/contato' className='nav-link text-uppercase text-expanded'>
-									Contato
-								</Link>
+                  Contato
+                </Link>
               </li>
             </ul>
           </div>
