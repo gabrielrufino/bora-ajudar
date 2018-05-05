@@ -61,7 +61,7 @@ class NewCampaign extends Component {
 
           <div className='form-group'>
             <label htmlFor='description'>Descrição</label>
-            <textarea className='form-control' id='description' placeholder='Fale sobre esta campanha' ref={ref => { this.description = ref }}></textarea>
+            <textarea className='form-control' id='description' placeholder='Fale sobre esta campanha' ref={ref => { this.description = ref }} />
           </div>
 
           <div className='form-group'>

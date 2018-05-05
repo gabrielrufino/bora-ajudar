@@ -49,7 +49,7 @@ class Campaigns extends Component {
                   campaign.type === 'money' &&
                   <div>
                     <div className='progress'>
-                      <div className='progress-bar' role='progressbar' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100'></div>
+                      <div className='progress-bar' role='progressbar' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100' />
                     </div>
                     <p>Meta: R$ { campaign.goal } | Atingidos: R$ { campaign.current }</p>
                     <div>
@@ -88,7 +88,7 @@ class Campaigns extends Component {
                   </h2>
                 </div>
               </div>
-              <img className='product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0' src='img/products-01-menor.jpg' alt=''/>
+              <img className='product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0' src='img/products-01-menor.jpg' alt='' />
               <div className='product-item-description d-flex mr-auto'>
                 <div className='bg-faded p-5 rounded'>
                   <p className='mb-0'>We take pride in our work, and it shows. Every time you order a beverage from us, we guarantee that it will be an experience worth having. Whether it's our world famous Venezuelan Cappuccino, a refreshing iced herbal tea, or something as simple as a cup of speciality sourced black coffee, you will be coming back for more.</p>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Header = props => {
+const Header = (props) => {
   return (
     <div>
       <h1 className='site-heading text-center text-white d-none d-lg-block'>
@@ -13,7 +13,7 @@ const Header = props => {
         <div className='container'>
           <a className='navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none' href='/'>Asilo Melhor Idade</a>
           <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation'>
-            <span className='navbar-toggler-icon'></span>
+            <span className='navbar-toggler-icon' />
           </button>
           <div className='collapse navbar-collapse' id='navbarResponsive'>
             <ul className='navbar-nav mx-auto'>

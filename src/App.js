@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom'
 
 import Header from './Header'
@@ -11,6 +12,7 @@ import Campaigns from './Campaigns'
 import Contact from './Contact'
 import Login from './Login'
 import Admin from './Admin'
+import NotFound from './NotFound'
 import Footer from './Footer'
 
 class App extends Component {
@@ -20,12 +22,15 @@ class App extends Component {
         <div>
           <Header />
 
-          <Route path='/' exact component={Home} />
-          <Route path='/sobre' component={About} />
-          <Route path='/campanhas' component={Campaigns} />
-          <Route path='/contato' component={Contact} />
-          <Route path='/admin' component={Admin} />
-          <Route path='/login' component={Login} />
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/sobre' component={About} />
+            <Route path='/campanhas' component={Campaigns} />
+            <Route path='/contato' component={Contact} />
+            <Route path='/admin' component={Admin} />
+            <Route path='/login' component={Login} />
+            <Route component={NotFound} />
+          </Switch>
 
           <Footer />
         </div>

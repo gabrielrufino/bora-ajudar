@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {
   Link,
   Route,
-  Redirect 
+  Redirect
 } from 'react-router-dom'
 
 import { auth } from './base'
@@ -10,7 +10,7 @@ import AdminHome from './AdminHome'
 import AdminCampaigns from './AdminCampaigns'
 
 class Admin extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -19,7 +19,7 @@ class Admin extends Component {
       user: null
     }
   }
-  componentDidMount() {
+  componentDidMount () {
     auth.onAuthStateChanged(user => {
       console.log('auth', user)
       this.setState({
@@ -29,7 +29,7 @@ class Admin extends Component {
       })
     })
   }
-  render() {
+  render () {
     if (this.state.isAuthing) {
       return <p>Verificando...</p>
     }
