@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Header = (props) => {
+const Header = () => {
   return (
     <div>
       <h1 className='site-heading text-center text-white d-none d-lg-block'>
