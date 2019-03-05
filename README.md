@@ -6,22 +6,16 @@ Projeto filantrópico que visa prover uma plataforma que divulgue uma instituiç
 
 ### Clone nosso repositório:
 
-<pre>
-	git clone https://github.com/gabrielrufino/bora-ajudar
-	cd bora-ajudar
-</pre>
+```
+$ git clone https://github.com/gabrielrufino/bora-ajudar
+$ cd bora-ajudar
+```
 
 ### Instale as dependências:
 
-Utilizando npm:
-<pre>
-	npm install
-</pre>
-
-Utilizando yarn:
-<pre>
-	yarn
-</pre>
+```
+$ npm install
+```
 
 ## Sincronize ao seu banco de dados
 
@@ -30,41 +24,35 @@ O database do firebase foi o banco escolhido para desenvolver o projeto, agregan
 ### JSON de uma campanha
 
 <strong>Campos comuns a todos os projetos:</strong>
-<pre>
-	{
-		"name": "Nome da campanha",
-		"slogan": "Frase de efeito para a campanha",
-		"description": "Descrição dos objetivos e motivações da campanha",
-		"type": "Tipo da capampanha"
-	}
-</pre>
+```js
+{
+	"name": "Nome da campanha",
+	"slogan": "Frase de efeito para a campanha",
+	"description": "Descrição dos objetivos e motivações da campanha",
+	"type": "Tipo da capampanha"
+}
+```
 
 <strong>type === "items" && inclua ao JSON:</strong>
-<pre>
-	{
-		"how": "De que forma o doador pode entrar em contato para doar os itens solicitados pela instituição"
-	}
-</pre>
+```js
+{
+	"how": "De que forma o doador pode entrar em contato para doar os itens solicitados pela instituição"
+}
+```
 
 <strong>type === "money" && inclua ao JSON:</strong>
-<pre>
-	{
-		"goal": x, // x é o valor final visado pela campanha
-		"current": y // y é o valor arrecadado até o momento
-	}
-</pre>
+```
+{
+	"goal": x, // x é o valor final visado pela campanha
+	"current": y // y é o valor arrecadado até o momento
+}
+```
 
 ## Vamos mudar o mundo com código
 
-Inicializando com npm:
-<pre>
-	npm start
-</pre>
-
-Inicializando com yarn:
-<pre>
-	yarn start
-</pre>
+```
+$ npm start
+```
 
 ## Créditos
 
