@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AdminHome = (props) => {
+const AdminHome = () => {
   return (
     <div>
       <h2 className='text-center'>Overview</h2>
